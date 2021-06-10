@@ -13,6 +13,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import axios from 'axios';
 import BookCard from './BookCard.jsx';
+import Navbar from './Navbar';
 function App() {
   // States
   const [maxResults, setMaxResults] = useState(10);
@@ -48,6 +49,9 @@ function App() {
         });
     }
   };
+  const handleNav = () =>{
+    return <Navbar />
+  }
   // Main Show Case
   const mainHeader = () => {
     return (
@@ -99,7 +103,6 @@ function App() {
       </div>
     );
   };
-
   const handleCards = () => {
     if (loading) {
       return (
@@ -140,6 +143,7 @@ function App() {
   };
   return (
     <div className='w-100 h-100'>
+      {handleNav()}
       {mainHeader()}
       {handleCards()}
       <ToastContainer />
