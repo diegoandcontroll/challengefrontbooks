@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, CardTitle, CardImg, CardBody, Button, Modal } from 'reactstrap';
+import StarRatingDemo from './Starred';
 const BookCard = ({
   thumbnail,
   title,
@@ -26,6 +27,7 @@ const BookCard = ({
       <CardBody>
         <CardTitle className='card-title'>{title}</CardTitle>
         <Button onClick={toggle}>More info</Button>
+        <StarRatingDemo />
       </CardBody>
       <Modal isOpen={modal} toggle={toggle}>
         <div className='modal-header d-flex justify-content-center'>

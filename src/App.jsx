@@ -15,13 +15,11 @@ import axios from 'axios';
 import BookCard from './BookCard.jsx';
 import Navbar from './Navbar';
 function App() {
-  // States
   const [maxResults, setMaxResults] = useState(10);
   const [startIndex, setStartIndex] = useState(1);
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [cards, setCards] = useState([]);
-  // Handle Search
   const handleSubmit = () => {
     setLoading(true);
     if (maxResults > 40 || maxResults < 1) {
@@ -52,7 +50,6 @@ function App() {
   const handleNav = () =>{
     return <Navbar />
   }
-  // Main Show Case
   const mainHeader = () => {
     return (
       <div className='main-image d-flex justify-content-center align-items-center flex-column'>
@@ -130,7 +127,6 @@ function App() {
               previewLink={item.volumeInfo.previewLink}
               infoLink={item.volumeInfo.infoLink}
             />
-            
           </div>
         );
       });

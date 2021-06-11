@@ -1,0 +1,22 @@
+.container-starred{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.star {
+  display: inline-block;  
+  cursor: pointer;
+}
+
+.inactive, .active {
+  background: transparent;
+  user-select: none;
+}
+
+.inactive {
+  color: #f1f1e8;
+}
+
+.active {
+  color: red;
+}
