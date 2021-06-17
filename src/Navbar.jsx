@@ -1,11 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -18,16 +15,11 @@ const Example = (props) => {
   return (
     <div>
       <Navbar color="dark" dark expand="md">
-        <NavbarBrand>
-          <a href="https://southsystem.com.br/">
-            <img src={process.env.PUBLIC_URL + '/logo.png'} width="300"/>
-          </a>
-        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="https://github.com/diegoandcontroll">GitHub</NavLink>
+              <NavLink href="https://github.com/diegoandcontroll" target="_blank">GitHub</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
